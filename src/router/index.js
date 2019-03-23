@@ -1,29 +1,70 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import headerVue from '@/components/Header'
-import footerVue from '@/components/Footer'
+import homepage from '@/components/homepage'
+import headerVue from '@/components/comment/Header'
+import footerVue from '@/components/comment/Footer'
+import categoryVue from '@/components/category'
+import cartVue from '@/components/cart'
+import userVue from '@/components/user'
+import navVue from '@/components/comment/Nav'
+import loginVue from '@/components/login'
+import searchVue from '@/components/search'
+import productVue from '@/components/product'
+import searchListVue from '@/components/searchList'
+import Mint from 'mint-ui'
+import 'mint-ui/lib/style.css'
+import Axios from 'axios'
+
+Vue.prototype.$axios = Axios
+/* Axios.defaults.baseURL = 'http://域名:端口号/文件名/' */
+Vue.use(Mint)
 
 Vue.component('headerVue', headerVue)
 Vue.component('footerVue', footerVue)
+Vue.component('navVue', navVue)
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'homepage',
+      component: homepage
     },
     {
-      path: '/1',
-      name: 'Header',
-      component: headerVue
+      path: '/category',
+      name: 'category',
+      component: categoryVue
     },
     {
-      path: '/12',
-      name: 'Footer',
-      component: footerVue
+      path: '/cart',
+      name: 'cart',
+      component: cartVue
+    },
+    {
+      path: '/user',
+      name: 'user',
+      component: userVue
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: loginVue
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: searchVue
+    },
+    {
+      path: '/searchList',
+      name: 'searchList',
+      component: searchListVue
+    },
+    {
+      path: '/product',
+      name: 'product',
+      component: productVue
     }
   ]
 })
