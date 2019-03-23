@@ -4,7 +4,7 @@
     <div class="left">
       <ul>
         <li v-for="(category,id) in categories" :key="id">
-          <router-link :to="{product}">{{category.categoryName}}</router-link>
+          <router-link :to="{name:'product'}">{{category.categoryName}}</router-link>
         </li>
       </ul>
     </div>
@@ -19,6 +19,7 @@
         </li>
       </ul>
     </div>
+    <footer-vue></footer-vue>
   </div>
 </template>
 <script>

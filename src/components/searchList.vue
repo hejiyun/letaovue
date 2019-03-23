@@ -1,11 +1,14 @@
 <template>
   <div class="searchList" >
     <nav-vue title="商品列表"></nav-vue>
+   <div class="searchmore">
+    <nav-vue title="搜索中心"></nav-vue>
     <mt-search
   v-model="value"
-  cancel-text="取消"
-  placeholder="请输入关键字">
+  placeholder="请输入搜索关键字">
 </mt-search>
+<mt-button class="searchBtn" size="small" type="primary">搜索</mt-button>
+</div>
 <div class="list">
    <ul>
        <li><a href="javascript:;">上架时间</a></li>
@@ -107,6 +110,7 @@
         <li class="mt_90"></li>
       </ul>
     </div>
+    <footer-vue></footer-vue>
   </div>
 </template>
 <script>
@@ -126,9 +130,18 @@ export default {
     overflow: auto;
     height: 100%;
 }
-.mint-search{
-    height: 0vh;
-    height: 52px !important;
+.searchmore{
+  position: relative;
+  overflow: hidden;
+}
+.searchBtn{
+  position: absolute;
+  top:10px;
+  right:10px;
+  z-index: 99;
+  border-radius:0;
+  border-top-right-radius:5px;
+  background-color: #007AFF;
 }
 a,a:link,a:hover,a:active{
   border-bottom: 1px solid #ccc;
@@ -142,16 +155,17 @@ a,a:link,a:hover,a:active{
     height: 30px;
 }
 .list ul li a{
-       color: #8f8f94;
-       font-size: 14px;
+       color: #666;
+       font-size: 12px;
        line-height: 30px;
+        text-decoration: none;
 }
 .list ul li{
     float: left;
     list-style: none;
     width: 25%;
     text-align: center;
-    background-color: #ccc;
+    background-color: #EEEEEE;
 }
 .sy-product {
   padding: 10px;
@@ -160,15 +174,17 @@ a,a:link,a:hover,a:active{
 .sy-product ul {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 .sy-product ul li {
   border: 1px solid #ccc;
   padding: 10px;
   float: left;
-  width: 40%;
+  width: 48%;
   margin-bottom: 10px;
   text-align: center;
   list-style: none;
+  box-sizing: border-box;
 }
 .sy-product ul li a{
   margin: 0;

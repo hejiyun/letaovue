@@ -16,32 +16,32 @@
       <ul>
         <li>
          <router-link :to="{}">
-           <img src="../../static/images/nav1.png" alt="">
+           <img src="../assets/nav1.png" alt="">
          </router-link>
         </li>
         <li>
          <router-link :to="{}">
-           <img src="../../static/images/nav2.png" alt="">
+           <img src="../assets/nav2.png" alt="">
          </router-link>
         </li>
         <li>
          <router-link :to="{}">
-           <img src="../../static/images/nav3.png" alt="">
+           <img src="../assets/nav3.png" alt="">
          </router-link>
         </li>
         <li>
          <router-link :to="{}">
-           <img src="../../static/images/nav4.png" alt="">
+           <img src="../assets/nav4.png" alt="">
          </router-link>
         </li>
         <li>
          <router-link :to="{}">
-           <img src="../../static/images/nav5.png" alt="">
+           <img src="../assets/nav5.png" alt="">
          </router-link>
         </li>
         <li>
          <router-link :to="{}">
-           <img src="../../static/images/nav6.png" alt="">
+           <img src="../assets/nav6.png" alt="">
          </router-link>
         </li>
       </ul>
@@ -50,7 +50,7 @@
       <ul>
         <li>
           <router-link :to="{name:'shooes'}">
-               <img src="../../static/images/product.jpg" alt="">
+               <img src="../assets/product.jpg" alt="">
                 <p class="info">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
                 <p>
                   <span class="price">¥560</span>
@@ -139,6 +139,7 @@
         <li class="mt_90"></li>
       </ul>
     </div>
+    <footer-vue></footer-vue>
   </div>
 </template>
 
@@ -181,22 +182,19 @@ td:hover{
   cursor: pointer;
 }
 .mint-swipe{
-  height: 100%;
-  height:212px ;
+ max-height: 400px;
 }
 .mint-swipe img{
   width: 100%;
-  height: 212px;
 }
 .classify{
   width: 100%;
   padding: 10px;
-  height:220px ;
-  box-sizing: border-box;
 }
 .classify ul {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .classify ul li {
   width: 33.3%;
@@ -215,14 +213,16 @@ td:hover{
 .sy-product ul {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 .sy-product ul li {
   border: 1px solid #ccc;
   padding: 10px;
   float: left;
-  width: 40%;
+  width: 48%;
   margin-bottom: 10px;
   text-align: center;
+  box-sizing: border-box;
 }
 .sy-product ul li a{
   margin: 0;

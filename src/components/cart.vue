@@ -163,7 +163,7 @@
         </div>
     </li>
      </mt-cell-swipe>
-  <mt-cell-swipe
+  <mt-cell-swipe class="changf"
   :right="[
     {
       content: 'Delete',
@@ -190,7 +190,7 @@
   :right="[
     {
       content: 'Delete',
-      style: { background: 'red', color: '#fff' },
+      style: { background: 'red', color: '#fff'},
       handler: () => this.$messagebox.confirm('您确定要删除么?','温馨提示')
     }
   ]">
@@ -302,6 +302,7 @@
     </li>
      </mt-cell-swipe>
 </ul>
+<footer-vue></footer-vue>
   </div>
 </template>
 <script>
@@ -374,5 +375,15 @@ ul{
 }
 .pull-right{
   float: right;
+}
+.changef{
+  width: 100%;
+}
+ #gwul .changef .mint-cell-wrapper .mint-cell-title {
+  flex:none !important;
+  -webkit-box-flex: none;
+}
+.mint-cell-value{
+  width: 100% !important;
 }
 </style>

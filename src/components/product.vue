@@ -49,8 +49,8 @@
      </div>
      <div class="ds-footer">
        <a href="javascript:;" class="pull-left">前往购物车</a>
-       <button type="button" class=" pull-right">买买买</button>
-       <button type="button" class=" pull-right" id="addcartBtn">加入购物车</button>
+         <button type="button" >买买买</button>
+       <button type="button"  id="addcartBtn">加入购物车</button>
     </div>
   </div>
 </template>
@@ -76,14 +76,15 @@ export default {
 }
 .product .ds-footer{
   border-top: 1px solid  red;
-  background-color: #fff;
+  background-color: #EFEFF4;
   padding: 5px 10px ;
-  height: 45px;
+  height: 55px;
   z-index: 9999;
    position:fixed;
     left: 0;
     bottom:0;
     max-width: 640px;
+    min-width: 320px;
     width: 100%;
     margin: 0 auto;
 }
@@ -107,9 +108,19 @@ export default {
 }
 .product .ds-footer button{
     margin-top:5px;
+    width: 68px;
+    height: 33px;
+        border-radius: 3px;
+        color: white;
+        outline: none;
+}
+.product .ds-footer button:nth-child(2){
+ background-color: #f0ad4e;
 }
 .product .ds-footer button:nth-child(3){
     margin-right: 5px;
+    background-color:#dd524d;
+    width: 96px;
 }
 .pr-main{
     width: 100%;
@@ -137,7 +148,7 @@ export default {
 .ds-footer button{
     float: right;
     margin: auto 0;
-    margin-right: 30px;
+    border:none;
 }
 .ds-footer a{
   float: left;

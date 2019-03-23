@@ -56,6 +56,15 @@ export default {
 }
 </script>
 <style scoped>
+.footer{
+  z-index: 998;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 55px;
+  left: auto;
+  max-width: 640px;
+}
 .bottom-bar {
   height: 55px;
   background-color: #006699;

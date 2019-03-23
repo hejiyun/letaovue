@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <router-view></router-view>
-   <footer-vue></footer-vue>
   </div>
 </template>
 
@@ -21,6 +20,7 @@ export default {
 *{
   margin: 0;
   padding: 0;
+    box-sizing: border-box;
 }
 a,a:link,a:hover,a:active{
     color: white;
@@ -29,7 +29,7 @@ a,a:link,a:hover,a:active{
 }
 body,html{
   height: 100%;
-  box-sizing: border-box;
+
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
