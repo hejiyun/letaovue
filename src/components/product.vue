@@ -49,7 +49,7 @@
      </div>
      <div class="ds-footer">
        <a href="javascript:;" class="pull-left">前往购物车</a>
-         <button type="button" >买买买</button>
+         <button type="button" @click="buyit" >买买买</button>
        <button type="button"  id="addcartBtn">加入购物车</button>
     </div>
   </div>
@@ -61,7 +61,11 @@ export default {
     return {
     }
   },
+  created () {
+  },
   methods: {
+    buyit () {
+    }
   }
 }
 </script>

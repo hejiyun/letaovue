@@ -16,7 +16,7 @@ import 'mint-ui/lib/style.css'
 import Axios from 'axios'
 
 Vue.prototype.$axios = Axios
-/* Axios.defaults.baseURL = 'http://域名:端口号/文件名/' */
+// Axios.defaults.baseURL = 'http://localhost:3000'
 Vue.use(Mint)
 
 Vue.component('headerVue', headerVue)

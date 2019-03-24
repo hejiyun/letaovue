@@ -3,13 +3,13 @@
     <header-vue title="乐淘云购"></header-vue>
     <div class="left">
       <ul>
-        <li v-for="(category,id) in categories" :key="id">
-          <router-link :to="{name:'product'}">{{category.categoryName}}</router-link>
+        <li v-for="category in categories" :key="category.id" @click="getpro">
+          <!-- <router-link :to="{name:'category',query:{id: category.id}}">{{category.categoryName}}</router-link> -->
+          <a href="javascript:;">{{category.categoryName}}</a>
         </li>
       </ul>
     </div>
     <div class="right">
-      <!-- <router-view></router-view> -->
       <ul>
         <li v-for="(product,id) in products" :key="id">
           <a  href="javascript:;">
@@ -87,6 +87,9 @@ export default {
     }
   },
   methods: {
+    getpro () {
+      this.$axios.get('/category/querySecondCategory').then(response => { console.log(response) })
+    }
   }
 }
 </script>

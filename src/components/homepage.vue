@@ -1,16 +1,16 @@
 <template>
   <div class="homepage">
     <header-vue title="乐淘云购"></header-vue>
-    <mt-swipe :auto="4000">
-      <mt-swipe-item><a href=""><img  src="../../static/images/banner1.png" alt=""></a></mt-swipe-item>
-      <mt-swipe-item><img src="../../static/images/banner2.png" alt=""></mt-swipe-item>
-      <mt-swipe-item><img src="../../static/images/banner3.png" alt=""></mt-swipe-item>
-      <mt-swipe-item><img src="../../static/images/banner4.png" alt=""></mt-swipe-item>
-      <mt-swipe-item><img src="../../static/images/banner5.png" alt=""></mt-swipe-item>
-      <mt-swipe-item><img src="../../static/images/banner6.png" alt=""></mt-swipe-item>
-      <mt-swipe-item><img src="../../static/images/banner7.png" alt=""></mt-swipe-item>
-      <mt-swipe-item><img src="../../static/images/banner8.jpg" alt=""></mt-swipe-item>
-      <mt-swipe-item><img src="../../static/images/banner9.png" alt=""></mt-swipe-item>
+    <mt-swipe :auto="4000" style="height:200px;">
+      <mt-swipe-item ><img  src="../../static/images/banner1.png" alt=""></mt-swipe-item>
+      <mt-swipe-item><img  src="../../static/images/banner2.png" alt=""></mt-swipe-item>
+      <mt-swipe-item><img  src="../../static/images/banner3.png" alt=""></mt-swipe-item>
+      <mt-swipe-item><img  src="../../static/images/banner4.png" alt=""></mt-swipe-item>
+      <mt-swipe-item><img  src="../../static/images/banner5.png" alt=""></mt-swipe-item>
+      <mt-swipe-item><img  src="../../static/images/banner6.png" alt=""></mt-swipe-item>
+      <mt-swipe-item><img  src="../../static/images/banner7.png" alt=""></mt-swipe-item>
+      <mt-swipe-item><img  src="../../static/images/banner8.jpg" alt=""></mt-swipe-item>
+      <mt-swipe-item><img  src="../../static/images/banner9.png" alt=""></mt-swipe-item>
     </mt-swipe>
     <div class="classify">
       <ul>
@@ -48,91 +48,14 @@
     </div>
     <div class="sy-product">
       <ul>
-        <li>
-          <router-link :to="{name:'shooes'}">
-               <img src="../assets/product.jpg" alt="">
-                <p class="info">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
+        <li v-for="product in products" :key="product.id">
+               <img :src="product.picAddr" alt="">
+                <p class="info">{{ product.proName }}</p>
                 <p>
-                  <span class="price">¥560</span>
-                  <span class="oldPrice">¥580</span>
+                  <span class="price">{{ product.price }}</span>
+                  <span class="oldPrice">{{ product.oldPrice }}</span>
                 </p>
-                <mt-button type="primary">立即购买</mt-button>
-          </router-link>
-        </li>
-        <li>
-          <router-link :to="{name:'shooes'}">
-               <img src="../../static/images/product.jpg" alt="">
-                <p class="info">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
-                <p>
-                  <span class="price">¥560</span>
-                  <span class="oldPrice">¥580</span>
-                </p>
-                <mt-button type="primary">立即购买</mt-button>
-          </router-link>
-        </li>
-        <li>
-          <router-link :to="{name:'shooes'}">
-               <img src="../../static/images/product.jpg" alt="">
-                <p class="info">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
-                <p>
-                  <span class="price">¥560</span>
-                  <span class="oldPrice">¥580</span>
-                </p>
-                <mt-button type="primary">立即购买</mt-button>
-          </router-link>
-        </li>
-        <li>
-          <router-link :to="{name:'shooes'}">
-               <img src="../../static/images/product.jpg" alt="">
-                <p class="info">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
-                <p>
-                  <span class="price">¥560</span>
-                  <span class="oldPrice">¥580</span>
-                </p>
-                <mt-button type="primary">立即购买</mt-button>
-          </router-link>
-        </li>
-        <li>
-          <router-link :to="{name:'shooes'}">
-               <img src="../../static/images/product.jpg" alt="">
-                <p class="info">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
-                <p>
-                  <span class="price">¥560</span>
-                  <span class="oldPrice">¥580</span>
-                </p>
-                <mt-button type="primary">立即购买</mt-button>
-          </router-link>
-        </li>
-        <li>
-          <router-link :to="{name:'shooes'}">
-               <img src="../../static/images/product.jpg" alt="">
-                <p class="info">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
-                <p>
-                  <span class="price">¥560</span>
-                  <span class="oldPrice">¥580</span>
-                </p>
-                <mt-button type="primary">立即购买</mt-button>
-          </router-link>
-        </li>
-        <li>
-          <router-link :to="{name:'shooes'}">
-               <img src="../../static/images/product.jpg" alt="">
-                <p class="info">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
-                <p>
-                  <span class="price">¥560</span>
-                  <span class="oldPrice">¥580</span>
-                </p>
-                <mt-button type="primary">立即购买</mt-button>
-          </router-link>
-        </li>
-        <li>
-          <router-link :to="{name:'shooes'}">
-               <img src="../../static/images/product.jpg" alt="">
-                <p class="info mt-ellipsis-2">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
-                <p>
-                  <span class="price">¥560</span>
-                  <span class="oldPrice">¥580</span>
-                </p>
+                   <router-link :to="{name:'product',query:{id: product.id }}">
                 <mt-button type="primary">立即购买</mt-button>
           </router-link>
         </li>
@@ -148,19 +71,102 @@ export default {
   name: 'homepage',
   data () {
     return {
-      msg: '渲染部分',
-      products: [{
-        name: '耐克',
-        id: '2',
-        size: '4'
-      }
+      products: [
+        {
+          id: 1,
+          proName: '匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮',
+          oldPrice: 888.1,
+          price: 499.1,
+          picAddr: '../../static/images/product.jpg'
+        },
+        {
+          id: 2,
+          proName: '匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮',
+          oldPrice: 888.1,
+          price: 499.1,
+          picAddr: '../../static/images/product.jpg'
+        },
+        {
+          id: 3,
+          proName: '匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮',
+          oldPrice: 888.1,
+          price: 499.1,
+          picAddr: '../../static/images/product.jpg'
+        },
+        {
+          id: 4,
+          proName: '匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮',
+          oldPrice: 888.1,
+          price: 499.1,
+          picAddr: '../../static/images/product.jpg'
+        },
+        {
+          id: 5,
+          proName: '匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮',
+          oldPrice: 888.1,
+          price: 499.1,
+          picAddr: '../../static/images/product.jpg'
+        },
+        {
+          id: 6,
+          proName: '匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮',
+          oldPrice: 888.1,
+          price: 499.1,
+          picAddr: '../../static/images/product.jpg'
+        },
+        {
+          id: 7,
+          proName: '匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮',
+          oldPrice: 888.1,
+          price: 499.1,
+          picAddr: '../../static/images/product.jpg'
+        },
+        {
+          id: 8,
+          proName: '匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮',
+          oldPrice: 888.1,
+          price: 499.1,
+          picAddr: '../../static/images/product.jpg'
+        },
+        {
+          id: 9,
+          proName: '匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮',
+          oldPrice: 888.1,
+          price: 499.1,
+          picAddr: '../../static/images/product.jpg'
+        },
+        {
+          id: 10,
+          proName: '匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮',
+          oldPrice: 888.1,
+          price: 499.1,
+          picAddr: '../../static/images/product.jpg'
+        },
+        {
+          id: 11,
+          proName: '匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮',
+          oldPrice: 888.1,
+          price: 499.1,
+          picAddr: '../../static/images/product.jpg'
+        },
+        {
+          id: 12,
+          proName: '匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮',
+          oldPrice: 888.1,
+          price: 499.1,
+          picAddr: '../../static/images/product.jpg'
+        }
       ]
     }
   },
+  mounted () {
+    // var img = this.$refs.img1.$el
+    // window.onresize = function () {
+    //   var changeHeight = 'height:' + img.children[0].offsetHeight + 'px'
+    //   console.log(changeHeight)
+    // }
+  },
   methods: {
-    dianji () {
-      console.log(1)
-    }
   }
 }
 </script>
@@ -181,11 +187,9 @@ ul {
 td:hover{
   cursor: pointer;
 }
-.mint-swipe{
- max-height: 400px;
-}
 .mint-swipe img{
   width: 100%;
+  height: 100%;
 }
 .classify{
   width: 100%;
@@ -232,7 +236,7 @@ td:hover{
   width: 130px;
   height: 130px;
 }
-.sy-product ul li a p {
+.sy-product ul li  p {
   font-size: 14px;
   margin-top: 0;
   margin-bottom: 10px;
@@ -246,10 +250,10 @@ td:hover{
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-.sy-product ul li a p span.price {
+.sy-product ul li  p span.price {
   color: red;
 }
-.sy-product ul li a p span.oldprice {
+.sy-product ul li  p span.oldprice {
   text-decoration: line-through;
 }
 .sy-product ul li:nth-child(2n+1) {
