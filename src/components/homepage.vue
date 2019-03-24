@@ -162,7 +162,7 @@ export default {
   mounted () {
     // var img = this.$refs.img1.$el
     // window.onresize = function () {
-    //   var changeHeight = 'height:' + img.children[0].offsetHeight + 'px'
+    //   changeHeight = 'height:' + img.children[0].offsetHeight + 'px'
     //   console.log(changeHeight)
     // }
   },

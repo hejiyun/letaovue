@@ -16,7 +16,7 @@ import 'mint-ui/lib/style.css'
 import Axios from 'axios'
 
 Vue.prototype.$axios = Axios
-// Axios.defaults.baseURL = 'http://localhost:3000'
+Axios.defaults.baseURL = 'http://localhost:3000'
 Vue.use(Mint)
 
 Vue.component('headerVue', headerVue)
@@ -35,6 +35,7 @@ export default new Router({
       path: '/category',
       name: 'category',
       component: categoryVue
+      // children:[{name:'fenlei1',path:'/fenlei1',component:fenlei1Vue},{name:'fenlei2',path:'/fenlei2',component:fenlei2Vue},{name:'fenlei3',path:'/fenlei3',component:fenlei3Vue}]
     },
     {
       path: '/cart',
